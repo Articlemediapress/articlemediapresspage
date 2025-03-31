@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend:wght@100..900&display=swap');
 /* General Styles */
 body {
     font-family: "Georgia", serif;
@@ -6,20 +7,25 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+   
 }
+
 
 /* Article Container */
 .article-container {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 40px 0 40px 100px; /* Shift left by setting left margin */
     background: white;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Header */
 h1 {
+    
     font-size: 32px;
     color: #222;
     margin-bottom: 10px;
@@ -46,12 +52,14 @@ h2 {
     margin-top: 30px;
     border-left: 4px solid #0073e6;
     padding-left: 10px;
+    font-family: "Lexend", sans-serif;
 }
 
 /* Paragraphs */
 p {
     font-size: 18px;
     margin-bottom: 15px;
+    font-family: "Lexend", sans-serif;
 }
 
 img{
@@ -65,6 +73,7 @@ blockquote {
     border-left: 4px solid #0073e6;
     padding-left: 15px;
     margin: 20px 0;
+    font-family: "Lexend", sans-serif;
 }
 
 /* Footer / Call to Action */
@@ -75,6 +84,7 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #777;
+    font-family: "Lexend", sans-serif;
 }
 
 /* Responsive Design */
@@ -93,6 +103,51 @@ footer {
         font-size: 16px;
     }
 }
+
+.header{
+    position: relative;
+    top: -40px;
+    background-color: beige;
+    height: 150px;
+    margin-bottom: 50px;
+
+}
+
+.headimg{
+position: relative;
+top: -130px;
+left: -30px;
+
+}
+
+.ads{
+position: absolute;
+left: 910px;
+top: 600px;
+transform: translateY(-50%) scale(0.6);
+background-color: rgb(255, 255, 255);
+border: 20px solid rgb(255, 255, 255);
+box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.textbox h4{
+color:  red;
+position: absolute;
+left: 1090px;
+top: 340px;
+font-family: "Lexend", sans-serif;
+}
+
+.adbox{
+
+position: absolute;
+left: 1030px;
+top: 390px;
+border-top: 3px solid red;
+width: 20%;
+}
+
+
 
 .cookie-popup {
     position: fixed;
@@ -121,4 +176,133 @@ footer {
 .cookie-popup button:hover {
     background: #005bb5;
 }
+
+.comment-section {
+    max-width: 820px;
+    margin: 40px 0 40px 100px; /* Shift left by setting left margin */
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.comment-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#comment-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+#post-comment {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    background: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#post-comment:hover {
+    background: #005bb5;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Make sure it's hidden on page load */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.modal-content button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background: #005bb5;
+}
+
+/* Blur background when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    text-align: right;
+    padding: 20px;
+}
+
+.auth-btn {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    position: relative;
+    top: -180px;
+}
+
+.auth-btn:hover {
+    background: #005bb5;
+}
+
+/* Error Bar */
+.error-bar {
+    position: absolute;
+    top: -50px; /* Starts off-screen */
+    left: 0;
+    width: 100%;
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0; /* Fully hidden initially */
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add opacity to transition */
+}
+
+
+
+
+
 
