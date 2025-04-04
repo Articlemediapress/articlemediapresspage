@@ -120,7 +120,8 @@ left: -30px;
 
 }
 
-.ads{
+/* styles for the ad */
+.ads{ 
 position: absolute;
 left: 910px;
 top: 600px;
